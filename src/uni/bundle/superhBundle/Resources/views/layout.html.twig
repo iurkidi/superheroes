@@ -1,0 +1,29 @@
+{% extends '::base.html.twig' %}
+
+
+ {% block cuerpo %}
+ 
+        <div id="menuSup">
+            {% block menuSup %}
+                
+             <ul id="menu-horizontal">
+                <li><a href="{{path('uni_superh_homepage')}}" title="Texto">INICIO</a>                               
+                <li><a href="{{path('linkZonas')}}" title="Texto">Zonas</a></li>
+                <li><a href="{{path('linkHeroes')}}" title="Texto">Heroes</a></li>
+                <li><a href="{{path('linkadmin')}}" title="Texto">Administracion</a></li>                                              
+             </ul>
+             
+            {% endblock %}
+        </div>
+ 
+        
+        <div id="central">
+            
+            {% block central %}
+            
+            {% endblock %}
+            
+        </div>
+ 
+ 
+ {% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Superheroes Itziar{% endblock %}</title>
+        
+        {% block stylesheets %}
+                <link href="{{ asset('bundles/unisuperh/css/websuperh.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+        
+        <script src="{{ asset('bundles/unisuperh/js/jssuperheroes.js') }}"></script>       
+      
+    </head>
+    <body>
+        
+        
+        <div id="cabecera" class="imagencab">
+            {% block cabecera %}
+                <h1 class="letralogo textocentrado izquierda"> Superheroes Itziar </h1> 
+                 <img src="{{ asset('bundles/unisuperh/img/spiderman.jpeg') }}" class="izquierda claseclearright"/>
+            {% endblock %}
+        </div>
+        
+        <div id="contenFormularios">
+            {% block cuerpo %}
+                Cuerpo
+            {% endblock %} 
+        </div>
+               {#<li><a href="{{path('uni_web_noticias_about')}}" title="Texto">ABOUT</a></li>#}           
+        <div id="pie">
+            {% block pie %}
+                <p class="izquierda separarIzq15 negrita">2015/2016</p>
+                <p class="derecha separarDcha20 negrita">Itziar Urkidi</p>
+            {% endblock %}
+        </div>
+       
+    </body>
+</html>

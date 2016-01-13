@@ -1,0 +1,13 @@
+{% extends 'uniSuperhBundle::layout.html.twig' %}
+
+{% block central %} 
+    
+    <h1>Menu de Administracion</h1>
+
+     <ul>
+        <li><a href="{{path('superheroe_new')}}" title="Texto">Nuevo superheroe</a>                               
+        <li><a href="{{path('tipos_new')}}" title="Texto">Nuevo tipo</a></li>
+        <li><a href="{{path('zonas_new')}}" title="Texto">Nueva zona</a></li>       
+     </ul>
+    
+{% endblock %}

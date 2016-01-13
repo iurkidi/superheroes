@@ -1,0 +1,31 @@
+{% extends 'uniSuperhBundle::layout.html.twig' %}
+
+{% block central %}
+                
+        <form action="{{path('superh_responder')}}" method="POST">
+             <div class="LineaFormulario">      
+                    Buscar TIPO superheroe:
+                    <input type="text" name="superh" value="">
+                    <input type="submit" value="Buscar">
+             </div>
+        </form>
+        
+       {% if nomTipo is not null%}
+       <div class="LineaFormulario">  
+        <h1 class="izquierda separarIzq15">
+            Superheroes de Tipo {{tabla.nombre}} 
+        </h1>
+       </div>
+       <div class="LineaFormulario">  </div>
+                
+            {% for superh in tabla.superheroe %}
+                <div class="LineaFormulario">
+                <h2 class="izquierda separarIzq15"><a href="{{ path('superheroe_show', { 'id': superh.id }) }}">{{ superh.nombre }} </a></h2>
+                {% for zona in superh.zona %}
+                    <h3 class="izquierda separarIzq15"><a href="{{ path('zonas_show', { 'id': zona.id }) }}">{{ zona.nombre }} </a></h3>
+                {% endfor %} 
+                </div>
+            {% endfor %}                                
+                                  
+     {%endif%} 
+{% endblock %}

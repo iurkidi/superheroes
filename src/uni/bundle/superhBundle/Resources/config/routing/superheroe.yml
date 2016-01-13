@@ -1,0 +1,38 @@
+linkadmin_conSeguridad:
+    resource: "@uniSuperhBundle/Resources/config/routing/conSeguridad/adminSeg.yml"
+    prefix:   /conSeguridad
+
+superheroe:
+    path:     /
+    defaults: { _controller: "uniSuperhBundle:superheroe:index" }
+   
+superh_responder:
+    path:     /superHResponder
+    defaults: { _controller: "uniSuperhBundle:superheroe:respSuperH" }
+
+superheroe_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniSuperhBundle:superheroe:show" }
+
+superheroe_new:
+    path:     /new
+    defaults: { _controller: "uniSuperhBundle:superheroe:new" }
+
+superheroe_create:
+    path:     /create
+    defaults: { _controller: "uniSuperhBundle:superheroe:create" }
+    requirements: { _method: post }
+
+superheroe_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniSuperhBundle:superheroe:edit" }
+
+superheroe_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniSuperhBundle:superheroe:update" }
+    requirements: { _method: post|put }
+
+superheroe_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniSuperhBundle:superheroe:delete" }
+    requirements: { _method: post|delete }

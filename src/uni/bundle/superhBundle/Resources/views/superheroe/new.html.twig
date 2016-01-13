@@ -1,0 +1,15 @@
+{% extends 'uniSuperhBundle::layout.html.twig' %}
+
+{% block central %} 
+    <h1>superheroe creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('superheroe') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

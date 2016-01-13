@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>An Error Occurred: {{ status_text }}</title>
+    </head>
+    <body>
+        <h1>Se ha producido un error</h1>
+        <h2>El servidor devuelve lo siguiente: "{{ status_code }} {{ status_text }}".</h2>
+        
+        <img src="{{ asset('bundles/unisuperh/img/errorsuperh.png') }}" class="centrado"/>
+
+        {#<div>
+            Something is broken. Please e-mail us at [email] and let us know
+            what you were doing when this error occurred. We will fix it as soon
+            as possible. Sorry for any inconvenience caused.
+        </div>#}
+    </body>
+</html>

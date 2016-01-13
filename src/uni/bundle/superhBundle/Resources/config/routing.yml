@@ -1,0 +1,27 @@
+linkZonas:
+    path:     /linkZonas
+    defaults: { _controller: "uniSuperhBundle:zonas:index" }
+    
+linkHeroes:
+    path:     /linkHeroes
+    defaults: { _controller: "uniSuperhBundle:superheroe:buscarSuperH" }
+
+uni_superh_tipos:
+    resource: "@uniSuperhBundle/Resources/config/routing/tipos.yml"
+    prefix:   /tipos
+
+uni_superh_superheroe:
+    resource: "@uniSuperhBundle/Resources/config/routing/superheroe.yml"
+    prefix:   /superheroe
+
+uni_superh_zonas:
+    resource: "@uniSuperhBundle/Resources/config/routing/zonas.yml"
+    prefix:   /zonas
+
+uni_superh_homepage:
+    path:     /inicio
+    defaults: { _controller: uniSuperhBundle:Default:index }
+    
+#uni_superh_inicio:
+#    path:     /inicio
+#    defaults: { _controller: uniSuperhBundle:Default:index }

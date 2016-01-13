@@ -1,0 +1,4 @@
+uni_superh:
+    resource: "@uniSuperhBundle/Resources/config/routing.yml"
+    prefix:   /
+

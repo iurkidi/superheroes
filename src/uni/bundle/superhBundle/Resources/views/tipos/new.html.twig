@@ -1,0 +1,15 @@
+{% extends 'uniSuperhBundle::layout.html.twig' %}
+
+{% block central %} 
+    <h1>tipos creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('tipos') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

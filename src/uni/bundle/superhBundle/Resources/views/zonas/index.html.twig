@@ -1,0 +1,48 @@
+{% extends 'uniSuperhBundle::layout.html.twig' %}
+
+{% block central %} 
+    <h1>zonas list</h1>
+    
+    <form id="selectCats" action="{{path('zona_buscar_resp')}}" method="POST">
+            
+            <div class="LineaFormulario">  </div>
+            <div class="LineaFormulario">  </div>
+            <div class="LineaFormulario"> 
+                <p class="izquierda separarIzq15">Seleccione una zona de la lista y a continuación se mostrarán los superheroes que se mueven por dicha zona.</p>
+            </div>
+            <div class="LineaFormulario">  </div>
+            <div class="LineaFormulario izquierda separarIzq15">      
+                <label for="nombre" class="letraverde">Zona: </label>                                    
+                     <select name="nombre" onblur="submitform(this)" class="izquierda">                         
+                     {% for entity in entities %}
+                        <option value="{{ entity.id }}">{{ entity.nombre }}</option>                        
+                     {% endfor %}
+                     </select>                                          
+             </div>
+             <input type="hidden" id="nomOculto" name="nomOculto" value=""/>
+    </form>
+
+    {% if nomZona is not null%}
+       <div class="LineaFormulario izquierda">  
+        <h1 class="izquierda separarIzq15">
+            Superheroes de <a href="{{ path('zonas_show', { 'id': eSuperH.id }) }}">{{ eSuperH.nombre }}</a>
+        </h1>
+       </div>
+       <div class="LineaFormulario izquierda">  </div>
+                
+            {% for superh in eSuperH.superheroes %}             
+                <div class="LineaFormulario izquierda separarIzq15">
+                    <h2 class="izquierda separarIzq15"><a href="{{ path('superheroe_show', { 'id': superh.id }) }}">{{ superh.nombre }}</a></h2>
+                </div>
+            {% endfor %}
+                      
+     {%endif%}                 
+ 
+       {# <ul>
+        <li>
+            <a href="{{ path('zonas_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>#}
+    {% endblock %}

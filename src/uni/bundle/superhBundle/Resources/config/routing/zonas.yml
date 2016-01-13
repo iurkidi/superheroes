@@ -1,0 +1,34 @@
+zonas:
+    path:     /
+    defaults: { _controller: "uniSuperhBundle:zonas:index" }
+    
+zonas_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniSuperhBundle:zonas:show" }
+
+zonas_new:
+    path:     /new
+    defaults: { _controller: "uniSuperhBundle:zonas:new" }
+
+zonas_create:
+    path:     /create
+    defaults: { _controller: "uniSuperhBundle:zonas:create" }
+    requirements: { _method: post }
+
+zonas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniSuperhBundle:zonas:edit" }
+
+zonas_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniSuperhBundle:zonas:update" }
+    requirements: { _method: post|put }
+
+zonas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniSuperhBundle:zonas:delete" }
+    requirements: { _method: post|delete }
+    
+zona_buscar_resp:
+    path:     /zonabuscarresp
+    defaults: { _controller: "uniSuperhBundle:zonas:buscarZonaResp" } 

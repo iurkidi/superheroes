@@ -1,0 +1,3 @@
+linkadmin:
+    path:     /
+    defaults: { _controller: "uniSuperhBundle:Default:indexAdmin" }
